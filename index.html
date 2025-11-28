@@ -1,444 +1,560 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSP Real Estate - Achat & Vente de Biens Immobiliers au Luxembourg</title>
-    <meta name="description" content="DSP Real Estate - Expert en achat et vente de terrains, maisons et propriétés d'exception au Luxembourg. Plus de 15 ans d'expérience à votre service.">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSPImmo - Excellence Immobilière</title>
+  <meta name="description" content="DSPImmo - Expert en achat et vente de terrains, maisons et propriétés au Luxembourg.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loader -->
-    <div id="loader">
-        <div class="loader-content">
-            <div class="spinner"></div>
-            <p>Chargement...</p>
-        </div>
+  <!-- Loader -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <span>DSP</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <nav class="container">
+      <a href="#accueil" class="logo">
+        <img src="logo.png" alt="DSPImmo" />
+      </a>
+
+      <div class="nav-center">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#processus">Processus</a></li>
+          <li><a href="#apropos">À Propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="accueil" class="hero">
+    <div class="hero-video-wrapper">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="dspimmohero.mov" type="video/mp4">
+      </video>
+      <div class="hero-gradient"></div>
     </div>
 
-    <!-- Header -->
-    <header id="header">
-        <nav class="container">
-            <div class="logo">
-                <img src="logo.png" alt="DSP Real Estate">
-            </div>
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#processus">Notre Processus</a></li>
-                <li><a href="#apropos">À Propos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Hero Content Outside Glass -->
+    <div class="hero-content">
+      <h1>Des Espaces Qui<br/><span class="gradient-text">Inspirent</span></h1>
+      <p>Nous allions excellence, précision et expertise pour vous accompagner dans vos projets immobiliers les plus ambitieux.</p>
+      <a href="#contact" class="btn btn-primary">
+        <span>Contactez-nous</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="accueil" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Votre Partenaire Immobilier de Confiance</h1>
-            <p>Achat et vente de terrains, maisons et propriétés d'exception au Luxembourg</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">Découvrir nos services</a>
-                <a href="#contact" class="btn btn-secondary">Nous contacter</a>
-            </div>
+    <!-- Glass Stats Bar at Bottom -->
+    <div class="hero-stats-bar">
+      <div class="stats-bar-inner">
+        <div class="stat-item">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Projets Réalisés</span>
         </div>
-        <div class="scroll-indicator">
-            <span></span>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Années d'Expérience</span>
         </div>
-    </section>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">€50M+</span>
+          <span class="stat-label">Valeur Gérée</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Clients Satisfaits</span>
+        </div>
+      </div>
+    </div>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Nos Services</h2>
-            <p class="section-subtitle">Des solutions complètes pour tous vos projets immobiliers</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Achat de Propriétés</h3>
-                    <p>Nous achetons des terrains, maisons et propriétés dans tout le Luxembourg. Notre équipe d'experts évalue votre bien rapidement et vous propose une offre juste et transparente. Transactions sécurisées et paiement rapide garanti.</p>
-                    <ul class="service-list">
-                        <li>Évaluation gratuite sous 24h</li>
-                        <li>Offre ferme et sans engagement</li>
-                        <li>Accompagnement juridique complet</li>
-                        <li>Flexibilité sur les délais</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                            <polyline points="21 15 16 10 5 21"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Vente de Biens</h3>
-                    <p>Portfolio exclusif de propriétés soigneusement sélectionnées. Nous mettons à votre disposition notre réseau étendu d'acheteurs potentiels et notre expertise marketing pour valoriser votre acquisition au meilleur prix.</p>
-                    <ul class="service-list">
-                        <li>Marketing professionnel multicanal</li>
-                        <li>Photos et visites virtuelles HD</li>
-                        <li>Réseau d'acheteurs qualifiés</li>
-                        <li>Négociation experte</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3>Conseil & Expertise</h3>
-                    <p>Bénéficiez de notre connaissance approfondie du marché luxembourgeois. Nous vous guidons dans vos décisions d'investissement avec des analyses précises et des recommandations stratégiques personnalisées.</p>
-                    <ul class="service-list">
-                        <li>Analyse de marché détaillée</li>
-                        <li>Estimation précise de valeur</li>
-                        <li>Conseil en investissement</li>
-                        <li>Veille juridique et fiscale</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Expertise Section -->
-    <section id="expertise" class="expertise">
-        <div class="container">
-            <h2 class="section-title">Notre Expertise</h2>
-            <p class="section-subtitle">Une connaissance approfondie du marché luxembourgeois</p>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="expertise-number">01</div>
-                    <h3>Terrains Constructibles</h3>
-                    <p>Spécialistes dans l'acquisition et la vente de terrains à bâtir dans toutes les régions du Luxembourg. Nous analysons le potentiel de chaque parcelle, les contraintes urbanistiques et les opportunités de développement pour vous garantir un investissement optimal.</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-number">02</div>
-                    <h3>Maisons Individuelles</h3>
-                    <p>Expertise reconnue dans les maisons familiales, des propriétés traditionnelles aux constructions contemporaines. Nous évaluons chaque bien selon des critères stricts : emplacement, état, potentiel de valorisation et conformité aux normes énergétiques actuelles.</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-number">03</div>
-                    <h3>Villas de Prestige</h3>
-                    <p>Marché haut de gamme des villas d'exception et propriétés de luxe. Service discret et sur-mesure pour une clientèle exigeante. Réseau exclusif d'acheteurs internationaux et accompagnement VIP tout au long du processus.</p>
-                </div>
-                <div class="expertise-card">
-                    <div class="expertise-number">04</div>
-                    <h3>Immeubles de Rapport</h3>
-                    <p>Conseil stratégique pour l'acquisition d'immeubles locatifs et de bâtiments commerciaux. Analyse de rentabilité, gestion locative et optimisation fiscale. Parfait pour les investisseurs cherchant des revenus passifs sécurisés.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Marquee Section -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <span>Excellence Immobilière</span>
+      <span class="dot">◆</span>
+      <span>Luxembourg</span>
+      <span class="dot">◆</span>
+      <span>Terrains</span>
+      <span class="dot">◆</span>
+      <span>Maisons</span>
+      <span class="dot">◆</span>
+      <span>Propriétés</span>
+      <span class="dot">◆</span>
+      <span>Excellence Immobilière</span>
+      <span class="dot">◆</span>
+      <span>Luxembourg</span>
+      <span class="dot">◆</span>
+      <span>Terrains</span>
+      <span class="dot">◆</span>
+      <span>Maisons</span>
+      <span class="dot">◆</span>
+      <span>Propriétés</span>
+      <span class="dot">◆</span>
+    </div>
+  </section>
 
-    <!-- Process Section -->
-    <section id="processus" class="process">
-        <div class="container">
-            <h2 class="section-title">Notre Processus</h2>
-            <p class="section-subtitle">Une méthode éprouvée pour votre réussite</p>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                    </div>
-                    <div class="step-content">
-                        <h3>1. Premier Contact</h3>
-                        <p>Échange initial pour comprendre vos besoins, vos objectifs et votre situation. Consultation gratuite et sans engagement, par téléphone, email ou lors d'un rendez-vous à notre bureau.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                        </svg>
-                    </div>
-                    <div class="step-content">
-                        <h3>2. Évaluation & Analyse</h3>
-                        <p>Visite sur place et évaluation complète de votre bien. Analyse comparative du marché, vérification des documents et estimation précise de la valeur. Rapport détaillé sous 48h.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                    </div>
-                    <div class="step-content">
-                        <h3>3. Proposition & Accord</h3>
-                        <p>Présentation d'une offre claire et détaillée. Négociation transparente et discussion des conditions. Une fois l'accord trouvé, nous préparons tous les documents nécessaires à la transaction.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <div class="step-content">
-                        <h3>4. Finalisation Sécurisée</h3>
-                        <p>Accompagnement complet jusqu'à la signature chez le notaire. Coordination avec tous les intervenants (banques, notaires, avocats). Transaction sécurisée et paiement dans les délais convenus.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <!-- Why Choose Us Section -->
-<section class="why-us">
+  <!-- Services Section -->
+  <section id="services" class="services">
     <div class="container">
-        <h2 class="section-title">Pourquoi Choisir DSP Real Estate ?</h2>
-        <div class="why-grid">
+      <div class="section-header">
+        <span class="section-tag">Nos Services</span>
+        <h2>Solutions Immobilières<br/><span class="gradient-text">Complètes</span></h2>
+        <p>Des services sur mesure pour tous vos projets immobiliers au Luxembourg</p>
+      </div>
 
-            <div class="why-card">
-                <div class="why-icon">
-                    <img src="icons/1.png" alt="Rapidité" />
-                </div>
-                <h3>Rapidité</h3>
-                <p>Réponse sous 24h et évaluation express. Nous comprenons l'importance du temps dans vos projets.</p>
-            </div>
+      <div class="services-grid">
+        <article class="service-card featured">
+          <div class="card-glow"></div>
+          <div class="service-number">01</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3>Achat de Propriétés</h3>
+          <p>Nous achetons des terrains, maisons et propriétés dans tout le Luxembourg avec une offre juste et un paiement rapide.</p>
+          <ul class="service-features">
+            <li>Évaluation gratuite sous 24h</li>
+            <li>Offre ferme et sans engagement</li>
+            <li>Accompagnement juridique</li>
+          </ul>
+          <a href="#contact" class="service-link">
+            <span>En savoir plus</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </article>
 
-            <div class="why-card">
-                <div class="why-icon">
-                    <img src="icons/2.png" alt="Sécurité" />
-                </div>
-                <h3>Sécurité</h3>
-                <p>Transactions 100% sécurisées avec accompagnement juridique complet à chaque étape.</p>
-            </div>
+        <article class="service-card">
+          <div class="card-glow"></div>
+          <div class="service-number">02</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+          </div>
+          <h3>Vente de Biens</h3>
+          <p>Portfolio exclusif et marketing professionnel pour vendre au meilleur prix.</p>
+          <ul class="service-features">
+            <li>Marketing multicanal</li>
+            <li>Photos & visites virtuelles</li>
+            <li>Négociation experte</li>
+          </ul>
+          <a href="#contact" class="service-link">
+            <span>En savoir plus</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </article>
 
-            <div class="why-card">
-                <div class="why-icon">
-                    <img src="icons/3.png" alt="Expertise" />
-                </div>
-                <h3>Expertise</h3>
-                <p>Plus de 15 ans d'expérience et une connaissance approfondie du marché luxembourgeois.</p>
-            </div>
-
-            <div class="why-card">
-                <div class="why-icon">
-                    <img src="icons/4.png" alt="Transparence" />
-                </div>
-                <h3>Transparence</h3>
-                <p>Communication claire, offres sans frais cachés et engagement total envers nos clients.</p>
-            </div>
-
-            <div class="why-card">
-                <div class="why-icon">
-                    <img src="icons/5.png" alt="Réseau" />
-                </div>
-                <h3>Réseau</h3>
-                <p>Accès à un réseau exclusif d'acheteurs et de vendeurs au Luxembourg et à l'international.</p>
-            </div>
-
-            <div class="why-card">
-                <div class="why-icon">
-                    <img src="icons/6.png" alt="Sur-mesure" />
-                </div>
-                <h3>Sur-mesure</h3>
-                <p>Solutions personnalisées adaptées à votre situation et vos objectifs spécifiques.</p>
-            </div>
-
-        </div>
+        <article class="service-card">
+          <div class="card-glow"></div>
+          <div class="service-number">03</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <h3>Conseil & Expertise</h3>
+          <p>Analyses précises et recommandations stratégiques personnalisées.</p>
+          <ul class="service-features">
+            <li>Analyse de marché</li>
+            <li>Conseil en investissement</li>
+            <li>Veille juridique & fiscale</li>
+          </ul>
+          <a href="#contact" class="service-link">
+            <span>En savoir plus</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </article>
+      </div>
     </div>
-</section>
+  </section>
 
-    </section>
+  <!-- Expertise Section -->
+  <section id="expertise" class="expertise">
+    <div class="container">
+      <div class="expertise-layout">
+        <div class="expertise-content">
+          <span class="section-tag">Notre Expertise</span>
+          <h2>Pourquoi Choisir<br/><span class="gradient-text">DSP Real Estate?</span></h2>
+          <p>Plus de 15 ans d'expérience au service de l'immobilier luxembourgeois. Notre connaissance approfondie du marché local et notre réseau étendu nous permettent de vous offrir un service d'exception.</p>
 
-    <!-- About Section -->
-    <section id="apropos" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="images/about.jpg" alt="DSP Real Estate équipe">
-                </div>
-                <div class="about-content">
-                    <h2>À Propos de DSP Real Estate</h2>
-                    <p>Fondée il y a plus de 15 ans, DSP Real Estate s'est imposée comme un acteur majeur et respecté du marché immobilier luxembourgeois. Notre mission est simple : faciliter vos projets immobiliers avec professionnalisme, intégrité et excellence.</p>
-                    <p>Notre équipe d'experts passionnés combine une connaissance approfondie du marché local avec les meilleures pratiques internationales. Que vous souhaitiez vendre rapidement votre propriété ou acquérir le bien de vos rêves, nous mettons notre expertise à votre service.</p>
-                    <p>Chez DSP Real Estate, chaque client est unique. Nous prenons le temps de comprendre vos besoins, vos contraintes et vos aspirations pour vous proposer des solutions sur-mesure qui dépassent vos attentes.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>500+</h3>
-                            <p>Transactions réussies</p>
-                        </div>
-                        <div class="stat">
-                            <h3>15+</h3>
-                            <p>Années d'expérience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>98%</h3>
-                            <p>Clients satisfaits</p>
-                        </div>
-                    </div>
-                </div>
+          <div class="expertise-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Expertise Locale</h4>
+                <p>Connaissance approfondie du marché luxembourgeois</p>
+              </div>
             </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Réactivité</h4>
+                <p>Réponse sous 24h garantie pour toutes vos demandes</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Sécurité</h4>
+                <p>Transactions sécurisées et accompagnement juridique</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Réseau</h4>
+                <p>Large réseau d'acheteurs et vendeurs qualifiés</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Ils Nous Font Confiance</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Service exceptionnel ! DSP Real Estate a vendu notre maison en moins d'un mois au prix souhaité. Professionnalisme et réactivité remarquables."</p>
-                    <div class="testimonial-author">
-                        <strong>Marie Laurent</strong>
-                        <span>Luxembourg-Ville</span>
-                    </div>
+        <div class="expertise-visual">
+          <div class="visual-card">
+            <div class="visual-glow"></div>
+            <div class="visual-content">
+              <div class="visual-stat">
+                <span class="big-number">15+</span>
+                <span class="stat-text">Années d'Excellence</span>
+              </div>
+              <div class="visual-bars">
+                <div class="bar">
+                  <span class="bar-label">Satisfaction Client</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 98%"></div></div>
+                  <span class="bar-value">98%</span>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Accompagnement de A à Z pour l'achat de notre terrain. Conseils précieux et transparence totale. Je recommande vivement !"</p>
-                    <div class="testimonial-author">
-                        <strong>Thomas Weber</strong>
-                        <span>Diekirch</span>
-                    </div>
+                <div class="bar">
+                  <span class="bar-label">Taux de Réussite</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 95%"></div></div>
+                  <span class="bar-value">95%</span>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Équipe très professionnelle et à l'écoute. Ils ont su comprendre nos besoins et nous ont trouvé la propriété idéale. Merci DSP !"</p>
-                    <div class="testimonial-author">
-                        <strong>Sophie Muller</strong>
-                        <span>Echternach</span>
-                    </div>
+                <div class="bar">
+                  <span class="bar-label">Recommandations</span>
+                  <div class="bar-track"><div class="bar-fill" style="width: 92%"></div></div>
+                  <span class="bar-value">92%</span>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contactez-nous</h2>
-            <p class="section-subtitle">Parlez-nous de votre projet, nous sommes là pour vous aider</p>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Informations de Contact</h3>
-                    <div class="contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        <div>
-                            <h4>Adresse</h4>
-                            <p>9 Rue du chemin de fer<br>L-8057 Luxembourg</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        <div>
-                            <h4>Téléphone</h4>
-                            <p>+352 26 31 31 38</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <div>
-                            <h4>Email</h4>
-                            <p>contact@dsp-realestate.lu</p>
-                        </div>
-                    </div>
-                    <div class="contact-hours">
-                        <h4>Heures d'Ouverture</h4>
-                        <p><strong>Lundi - Vendredi:</strong> 9h00 - 18h00</p>
-                        <p><strong>Samedi:</strong> Sur rendez-vous</p>
-                        <p><strong>Dimanche:</strong> Sur rendez-vous</p>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Votre nom" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Votre email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Votre téléphone">
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Type de demande</option>
-                            <option value="vendre">Je souhaite vendre</option>
-                            <option value="acheter">Je souhaite acheter</option>
-                            <option value="estimation">Demande d'estimation</option>
-                            <option value="conseil">Demande de conseil</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="5" placeholder="Votre message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
-                </form>
-            </div>
+  <!-- Process Section -->
+  <section id="processus" class="process">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">Notre Processus</span>
+        <h2>Un Accompagnement<br/><span class="gradient-text">Étape par Étape</span></h2>
+        <p>Un processus transparent et efficace pour concrétiser vos projets</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-line"></div>
+
+        <div class="process-step">
+          <div class="step-marker">
+            <span>01</span>
+          </div>
+          <div class="step-content">
+            <h3>Premier Contact</h3>
+            <p>Discussion de vos besoins et objectifs lors d'un rendez-vous personnalisé.</p>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="logowhite.png" alt="DSP Real Estate" class="footer-logo">
-                    <p>Votre partenaire immobilier de confiance au Luxembourg depuis plus de 15 ans.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#expertise">Expertise</a></li>
-                        <li><a href="#processus">Notre Processus</a></li>
-                        <li><a href="#apropos">À Propos</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>+352 26 31 31 38</p>
-                    <p>contact@dspestate.com</p>
-                    <p>9 Rue du chemin de Fer<br>L-8057 Luxembourg</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Nos Services</h4>
-                    <ul>
-                        <li>Achat de propriétés</li>
-                        <li>Vente de biens</li>
-                        <li>Conseil & Expertise</li>
-                        <li>Évaluation gratuite</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 DSP Real Estate. Tous droits réservés.</p>
-            </div>
+        <div class="process-step">
+          <div class="step-marker">
+            <span>02</span>
+          </div>
+          <div class="step-content">
+            <h3>Évaluation</h3>
+            <p>Analyse détaillée du bien et estimation gratuite sous 24 heures.</p>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="process-step">
+          <div class="step-marker">
+            <span>03</span>
+          </div>
+          <div class="step-content">
+            <h3>Stratégie</h3>
+            <p>Élaboration d'un plan d'action sur mesure adapté à votre situation.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-marker">
+            <span>04</span>
+          </div>
+          <div class="step-content">
+            <h3>Finalisation</h3>
+            <p>Accompagnement complet jusqu'à la signature et au-delà.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="apropos" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-tag">À Propos</span>
+          <h2>Votre Partenaire de<br/><span class="gradient-text">Confiance</span></h2>
+          <p>Depuis plus de 15 ans, DSP Real Estate accompagne particuliers et professionnels dans leurs projets immobiliers au Luxembourg. Notre équipe d'experts passionnés met son savoir-faire à votre service pour vous garantir les meilleures conditions.</p>
+          <p>Notre approche personnalisée et notre connaissance approfondie du marché local font de nous le partenaire idéal pour concrétiser vos ambitions immobilières.</p>
+
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="stat-value">150+</span>
+              <span class="stat-label">Transactions</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-value">€50M+</span>
+              <span class="stat-label">Valeur Gérée</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-value">98%</span>
+              <span class="stat-label">Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="card-inner">
+              <div class="quote-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              <p class="testimonial-text">"Service exceptionnel ! L'équipe DSP a vendu notre propriété en moins d'un mois au prix souhaité. Professionnalisme et réactivité au rendez-vous."</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <strong>Marie Laurent</strong>
+                  <span>Luxembourg-Ville</span>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-tag">Contact</span>
+          <h2>Parlons de Votre<br/><span class="gradient-text">Projet</span></h2>
+          <p>Contactez-nous pour discuter de vos besoins immobiliers. Notre équipe est à votre écoute pour vous accompagner.</p>
+
+          <div class="contact-details">
+            <a href="#" class="contact-item" id="phoneLink" onclick="revealPhone(event)">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <span class="label">Téléphone</span>
+                <span class="value" id="phoneDisplay" data-p1="+352" data-p2="26" data-p3="31" data-p4="31" data-p5="38">Cliquez pour voir</span>
+              </div>
+            </a>
+
+            <a href="#" class="contact-item" id="emailLink" onclick="revealEmail(event)">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <span class="label">Email</span>
+                <span class="value" id="emailDisplay" data-user="info" data-domain="dspimmo.lu">Cliquez pour voir</span>
+              </div>
+            </a>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <span class="label">Adresse</span>
+                <span class="value">9 Rue du chemin de fer<br/>L-8057 Luxembourg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzqlgpe" method="POST">
+            <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Votre nom" required />
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Votre email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Votre téléphone" />
+            </div>
+            <div class="form-group">
+              <select name="request_type" required>
+                <option value="">Type de demande</option>
+                <option value="Je souhaite vendre">Je souhaite vendre</option>
+                <option value="Je souhaite acheter">Je souhaite acheter</option>
+                <option value="Demande d'estimation">Demande d'estimation</option>
+                <option value="Demande de conseil">Demande de conseil</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Envoyer le message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#accueil" class="footer-logo">
+            <img src="logo.png" alt="DSP Real Estate" />
+          </a>
+          <p>Votre partenaire immobilier de confiance au Luxembourg depuis plus de 15 ans.</p>
+
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#expertise">Expertise</a></li>
+              <li><a href="#processus">Processus</a></li>
+              <li><a href="#apropos">À Propos</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Achat de propriétés</a></li>
+              <li><a href="#services">Vente de biens</a></li>
+              <li><a href="#services">Conseil & Expertise</a></li>
+              <li><a href="#services">Évaluation gratuite</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><span class="footer-phone" data-p1="+352" data-p2="26" data-p3="31" data-p4="31" data-p5="38"></span></li>
+              <li><span class="footer-email" data-user="info" data-domain="dspimmo.lu"></span></li>
+              <li>9 Rue du chemin de fer</li>
+              <li>L-8057 Luxembourg</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 DSPImmo. Tous droits réservés.</p>
+        <span class="designer-credit">Website designed by <a href="https://tta.lu" target="_blank" rel="noopener">tta.lu</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
