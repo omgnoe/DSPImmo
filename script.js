@@ -307,6 +307,82 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ===============================
+// Mobile Carousel Functionality
+// ===============================
+function initCarousel(containerId, dotsId) {
+  const container = document.getElementById(containerId);
+  const dotsContainer = document.getElementById(dotsId);
+  
+  if (!container || !dotsContainer) return;
+  
+  const slides = container.querySelectorAll('.carousel-slide');
+  if (slides.length === 0) return;
+  
+  // Create dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.classList.add('carousel-dot');
+    if (index === 0) dot.classList.add('active');
+    dot.setAttribute('aria-label', `Slide ${index + 1}`);
+    dotsContainer.appendChild(dot);
+  });
+  
+  const dots = dotsContainer.querySelectorAll('.carousel-dot');
+  let currentIndex = 0;
+  
+  // Update active dot based on scroll
+  const updateDots = () => {
+    const scrollLeft = container.scrollLeft;
+    const slideWidth = slides[0].offsetWidth + 16; // gap
+    const newIndex = Math.round(scrollLeft / slideWidth);
+    
+    if (newIndex !== currentIndex && newIndex >= 0 && newIndex < slides.length) {
+      currentIndex = newIndex;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+  };
+  
+  // Scroll listener
+  let scrollTimeout;
+  container.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(updateDots, 50);
+  });
+  
+  // Dot click handlers
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      const slideWidth = slides[0].offsetWidth + 16;
+      container.scrollTo({
+        left: index * slideWidth,
+        behavior: 'smooth'
+      });
+    });
+  });
+}
+
+// Initialize carousels on mobile
+if (window.innerWidth <= 768) {
+  document.addEventListener('DOMContentLoaded', () => {
+    initCarousel('servicesCarousel', 'servicesDots');
+    initCarousel('expertiseCarousel', 'expertiseDots');
+  });
+}
+
+// Re-init on resize
+let wasMobile = window.innerWidth <= 768;
+window.addEventListener('resize', () => {
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile && !wasMobile) {
+    initCarousel('servicesCarousel', 'servicesDots');
+    initCarousel('expertiseCarousel', 'expertiseDots');
+  }
+  wasMobile = isMobile;
+});
+
 // Console branding
 console.log('%c DSPImmo ', 'background: linear-gradient(135deg, #1d0d60 0%, #005ba9 50%, #38c0df 100%); color: white; padding: 10px 20px; font-size: 16px; font-weight: bold; border-radius: 4px;');
 console.log('%c Excellence Immobilière au Luxembourg ', 'color: #38c0df; font-size: 12px;');

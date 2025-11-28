@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DSPImmo - Excellence Immobilière</title>
   <meta name="description" content="DSPImmo - Expert en achat et vente de terrains, maisons et propriétés au Luxembourg.">
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +31,7 @@
   <header id="header">
     <nav class="container">
       <a href="#accueil" class="logo">
-        <img src="logo.png" alt="DSPImmo" />
+        <img src="assets/logos/logo.png" alt="DSPImmo" />
       </a>
 
       <div class="nav-center">
@@ -49,7 +57,7 @@
   <section id="accueil" class="hero">
     <div class="hero-video-wrapper">
       <video autoplay muted loop playsinline class="hero-video">
-        <source src="dspimmohero.mov" type="video/mp4">
+        <source src="assets/videos/dspimmohero.mov" type="video/mp4">
       </video>
       <div class="hero-gradient"></div>
     </div>
@@ -128,86 +136,145 @@
   <!-- Services Section -->
   <section id="services" class="services">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Nos Services</span>
-        <h2>Solutions Immobilières<br/><span class="gradient-text">Complètes</span></h2>
-        <p>Des services sur mesure pour tous vos projets immobiliers au Luxembourg</p>
+      <!-- Desktop Layout -->
+      <div class="services-layout desktop-only">
+        <!-- Left: Image -->
+        <div class="services-image">
+          <div class="image-frame">
+            <img src="assets/images/luxembourg-aerial.jpg" alt="Luxembourg Aerial View" loading="lazy">
+            <div class="image-overlay"></div>
+            <div class="image-badge">
+              <span class="badge-number">150+</span>
+              <span class="badge-text">Projets</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="services-content">
+          <span class="section-tag">Nos Services</span>
+          <h2>Solutions Immobilières<br/><span class="gradient-text">Complètes</span></h2>
+          <p>Des services sur mesure pour tous vos projets immobiliers au Luxembourg</p>
+
+          <div class="services-list">
+            <div class="service-item">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </div>
+              <div class="service-text">
+                <h3>Achat de Propriétés</h3>
+                <p>Nous achetons des terrains, maisons et propriétés dans tout le Luxembourg avec une offre juste et un paiement rapide.</p>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+              </div>
+              <div class="service-text">
+                <h3>Vente de Biens</h3>
+                <p>Portfolio exclusif et marketing professionnel pour vendre au meilleur prix.</p>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <div class="service-text">
+                <h3>Conseil & Expertise</h3>
+                <p>Analyses précises et recommandations stratégiques personnalisées.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">
+            <span>Nous contacter</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <div class="services-grid">
-        <article class="service-card featured">
-          <div class="card-glow"></div>
-          <div class="service-number">01</div>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <h3>Achat de Propriétés</h3>
-          <p>Nous achetons des terrains, maisons et propriétés dans tout le Luxembourg avec une offre juste et un paiement rapide.</p>
-          <ul class="service-features">
-            <li>Évaluation gratuite sous 24h</li>
-            <li>Offre ferme et sans engagement</li>
-            <li>Accompagnement juridique</li>
-          </ul>
-          <a href="#contact" class="service-link">
-            <span>En savoir plus</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </article>
+      <!-- Mobile Carousel -->
+      <div class="mobile-carousel">
+        <div class="section-header center">
+          <span class="section-tag">Nos Services</span>
+          <h2>Solutions<br/><span class="gradient-text">Complètes</span></h2>
+        </div>
 
-        <article class="service-card">
-          <div class="card-glow"></div>
-          <div class="service-number">02</div>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5"/>
-              <polyline points="21 15 16 10 5 21"/>
-            </svg>
-          </div>
-          <h3>Vente de Biens</h3>
-          <p>Portfolio exclusif et marketing professionnel pour vendre au meilleur prix.</p>
-          <ul class="service-features">
-            <li>Marketing multicanal</li>
-            <li>Photos & visites virtuelles</li>
-            <li>Négociation experte</li>
-          </ul>
-          <a href="#contact" class="service-link">
-            <span>En savoir plus</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </article>
+        <div class="carousel-container" id="servicesCarousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <div class="service-card-mobile">
+                <div class="service-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                </div>
+                <h3>Achat de Propriétés</h3>
+                <p>Nous achetons des terrains, maisons et propriétés dans tout le Luxembourg avec une offre juste et un paiement rapide.</p>
+                <ul class="service-features-mobile">
+                  <li>Évaluation gratuite sous 24h</li>
+                  <li>Offre ferme et sans engagement</li>
+                  <li>Accompagnement juridique</li>
+                </ul>
+              </div>
+            </div>
 
-        <article class="service-card">
-          <div class="card-glow"></div>
-          <div class="service-number">03</div>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-              <line x1="12" y1="22.08" x2="12" y2="12"/>
-            </svg>
+            <div class="carousel-slide">
+              <div class="service-card-mobile">
+                <div class="service-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                </div>
+                <h3>Vente de Biens</h3>
+                <p>Portfolio exclusif et marketing professionnel pour vendre au meilleur prix.</p>
+                <ul class="service-features-mobile">
+                  <li>Marketing multicanal</li>
+                  <li>Photos & visites virtuelles</li>
+                  <li>Négociation experte</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="service-card-mobile">
+                <div class="service-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                </div>
+                <h3>Conseil & Expertise</h3>
+                <p>Analyses précises et recommandations stratégiques personnalisées.</p>
+                <ul class="service-features-mobile">
+                  <li>Analyse de marché</li>
+                  <li>Conseil en investissement</li>
+                  <li>Veille juridique & fiscale</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <h3>Conseil & Expertise</h3>
-          <p>Analyses précises et recommandations stratégiques personnalisées.</p>
-          <ul class="service-features">
-            <li>Analyse de marché</li>
-            <li>Conseil en investissement</li>
-            <li>Veille juridique & fiscale</li>
-          </ul>
-          <a href="#contact" class="service-link">
-            <span>En savoir plus</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </article>
+        </div>
+        <div class="carousel-dots" id="servicesDots"></div>
       </div>
     </div>
   </section>
@@ -215,10 +282,11 @@
   <!-- Expertise Section -->
   <section id="expertise" class="expertise">
     <div class="container">
-      <div class="expertise-layout">
+      <!-- Desktop Layout -->
+      <div class="expertise-layout desktop-only">
         <div class="expertise-content">
           <span class="section-tag">Notre Expertise</span>
-          <h2>Pourquoi Choisir<br/><span class="gradient-text">DSP Real Estate?</span></h2>
+          <h2>Pourquoi Choisir<br/><span class="gradient-text">DSPImmo?</span></h2>
           <p>Plus de 15 ans d'expérience au service de l'immobilier luxembourgeois. Notre connaissance approfondie du marché local et notre réseau étendu nous permettent de vous offrir un service d'exception.</p>
 
           <div class="expertise-features">
@@ -278,33 +346,111 @@
         </div>
 
         <div class="expertise-visual">
-          <div class="visual-card">
-            <div class="visual-glow"></div>
-            <div class="visual-content">
-              <div class="visual-stat">
-                <span class="big-number">15+</span>
-                <span class="stat-text">Années d'Excellence</span>
+          <div class="image-frame large">
+            <img src="assets/images/luxembourg-city.jpg" alt="Luxembourg City Tram" loading="lazy">
+            <div class="image-overlay"></div>
+            <div class="image-stats">
+              <div class="mini-stat">
+                <span class="mini-number">15+</span>
+                <span class="mini-label">Années</span>
               </div>
-              <div class="visual-bars">
-                <div class="bar">
-                  <span class="bar-label">Satisfaction Client</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 98%"></div></div>
-                  <span class="bar-value">98%</span>
-                </div>
-                <div class="bar">
-                  <span class="bar-label">Taux de Réussite</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 95%"></div></div>
-                  <span class="bar-value">95%</span>
-                </div>
-                <div class="bar">
-                  <span class="bar-label">Recommandations</span>
-                  <div class="bar-track"><div class="bar-fill" style="width: 92%"></div></div>
-                  <span class="bar-value">92%</span>
-                </div>
+              <div class="mini-stat">
+                <span class="mini-number">98%</span>
+                <span class="mini-label">Satisfaction</span>
+              </div>
+              <div class="mini-stat">
+                <span class="mini-number">95%</span>
+                <span class="mini-label">Réussite</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Mobile Layout -->
+      <div class="mobile-carousel">
+        <div class="section-header center">
+          <span class="section-tag">Notre Expertise</span>
+          <h2>Pourquoi<br/><span class="gradient-text">DSPImmo?</span></h2>
+        </div>
+
+        <!-- Image with stats -->
+        <div class="expertise-image-mobile">
+          <div class="image-frame">
+            <img src="assets/images/luxembourg-city.jpg" alt="Luxembourg City" loading="lazy">
+            <div class="image-overlay"></div>
+          </div>
+          <div class="mobile-stats-row">
+            <div class="mobile-stat">
+              <span class="mobile-stat-number">15+</span>
+              <span class="mobile-stat-label">Années</span>
+            </div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-number">98%</span>
+              <span class="mobile-stat-label">Satisfaction</span>
+            </div>
+            <div class="mobile-stat">
+              <span class="mobile-stat-number">95%</span>
+              <span class="mobile-stat-label">Réussite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features as horizontal scroll -->
+        <div class="carousel-container" id="expertiseCarousel">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <div class="feature-card-mobile">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </div>
+                <h4>Expertise Locale</h4>
+                <p>Connaissance approfondie du marché luxembourgeois</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="feature-card-mobile">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <h4>Réactivité</h4>
+                <p>Réponse sous 24h garantie pour toutes vos demandes</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="feature-card-mobile">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <h4>Sécurité</h4>
+                <p>Transactions sécurisées et accompagnement juridique</p>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="feature-card-mobile">
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <h4>Réseau</h4>
+                <p>Large réseau d'acheteurs et vendeurs qualifiés</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots" id="expertiseDots"></div>
       </div>
     </div>
   </section>
@@ -368,10 +514,19 @@
   <section id="apropos" class="about">
     <div class="container">
       <div class="about-grid">
+        <!-- Left: Image -->
+        <div class="about-image">
+          <div class="image-frame">
+            <img src="assets/images/luxembourg-bridge.jpg" alt="Pont Adolphe Luxembourg" loading="lazy">
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
         <div class="about-content">
           <span class="section-tag">À Propos</span>
           <h2>Votre Partenaire de<br/><span class="gradient-text">Confiance</span></h2>
-          <p>Depuis plus de 15 ans, DSP Real Estate accompagne particuliers et professionnels dans leurs projets immobiliers au Luxembourg. Notre équipe d'experts passionnés met son savoir-faire à votre service pour vous garantir les meilleures conditions.</p>
+          <p>Depuis plus de 15 ans, DSPImmo accompagne particuliers et professionnels dans leurs projets immobiliers au Luxembourg. Notre équipe d'experts passionnés met son savoir-faire à votre service pour vous garantir les meilleures conditions.</p>
           <p>Notre approche personnalisée et notre connaissance approfondie du marché local font de nous le partenaire idéal pour concrétiser vos ambitions immobilières.</p>
 
           <div class="about-stats">
@@ -388,24 +543,18 @@
               <span class="stat-label">Satisfaction</span>
             </div>
           </div>
-        </div>
 
-        <div class="about-visual">
-          <div class="about-card">
-            <div class="card-inner">
-              <div class="quote-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                </svg>
-              </div>
-              <p class="testimonial-text">"Service exceptionnel ! L'équipe DSP a vendu notre propriété en moins d'un mois au prix souhaité. Professionnalisme et réactivité au rendez-vous."</p>
-              <div class="testimonial-author">
-                <div class="author-info">
-                  <strong>Marie Laurent</strong>
-                  <span>Luxembourg-Ville</span>
-                </div>
-                <div class="stars">★★★★★</div>
-              </div>
+          <!-- Testimonial -->
+          <div class="testimonial-inline">
+            <div class="quote-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            <p>"Service exceptionnel ! L'équipe DSP a vendu notre propriété en moins d'un mois."</p>
+            <div class="testimonial-footer">
+              <strong>Marie Laurent</strong>
+              <span class="stars">★★★★★</span>
             </div>
           </div>
         </div>
@@ -415,89 +564,118 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
+    <div class="contact-bg">
+      <div class="contact-bg-gradient"></div>
+    </div>
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info">
+      <div class="contact-wrapper">
+        <!-- Header centered -->
+        <div class="contact-header">
           <span class="section-tag">Contact</span>
-          <h2>Parlons de Votre<br/><span class="gradient-text">Projet</span></h2>
-          <p>Contactez-nous pour discuter de vos besoins immobiliers. Notre équipe est à votre écoute pour vous accompagner.</p>
+          <h2>Parlons de Votre <span class="gradient-text">Projet</span></h2>
+          <p>Contactez-nous pour discuter de vos besoins immobiliers. Notre équipe est à votre écoute.</p>
+        </div>
 
-          <div class="contact-details">
-            <a href="#" class="contact-item" id="phoneLink" onclick="revealPhone(event)">
-              <div class="contact-icon">
+        <!-- Main content grid -->
+        <div class="contact-content">
+          <!-- Form Card -->
+          <div class="contact-form-card">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzqlgpe" method="POST">
+              <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nom</label>
+                  <input type="text" id="name" name="name" placeholder="Votre nom" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Votre email" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Téléphone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" />
+                </div>
+                <div class="form-group">
+                  <label for="request">Type de demande</label>
+                  <select id="request" name="request_type" required>
+                    <option value="">Sélectionnez...</option>
+                    <option value="Je souhaite vendre">Je souhaite vendre</option>
+                    <option value="Je souhaite acheter">Je souhaite acheter</option>
+                    <option value="Demande d'estimation">Demande d'estimation</option>
+                    <option value="Demande de conseil">Demande de conseil</option>
+                    <option value="Autre">Autre</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Décrivez votre projet..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <span>Envoyer le message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info Cards -->
+          <div class="contact-info-side">
+            <a href="#" class="contact-card" id="phoneLink" onclick="revealPhone(event)">
+              <div class="contact-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
               </div>
-              <div class="contact-text">
-                <span class="label">Téléphone</span>
-                <span class="value" id="phoneDisplay" data-p1="+352" data-p2="26" data-p3="31" data-p4="31" data-p5="38">Cliquez pour voir</span>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Téléphone</span>
+                <span class="contact-card-value" id="phoneDisplay" data-p1="+352" data-p2="26" data-p3="31" data-p4="31" data-p5="38">Cliquez pour révéler</span>
               </div>
+              <div class="contact-card-arrow">→</div>
             </a>
 
-            <a href="#" class="contact-item" id="emailLink" onclick="revealEmail(event)">
-              <div class="contact-icon">
+            <a href="#" class="contact-card" id="emailLink" onclick="revealEmail(event)">
+              <div class="contact-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>
               </div>
-              <div class="contact-text">
-                <span class="label">Email</span>
-                <span class="value" id="emailDisplay" data-user="info" data-domain="dspimmo.lu">Cliquez pour voir</span>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Email</span>
+                <span class="contact-card-value" id="emailDisplay" data-user="info" data-domain="dspimmo.lu">Cliquez pour révéler</span>
               </div>
+              <div class="contact-card-arrow">→</div>
             </a>
 
-            <div class="contact-item">
-              <div class="contact-icon">
+            <div class="contact-card">
+              <div class="contact-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
               </div>
-              <div class="contact-text">
-                <span class="label">Adresse</span>
-                <span class="value">9 Rue du chemin de fer<br/>L-8057 Luxembourg</span>
+              <div class="contact-card-content">
+                <span class="contact-card-label">Adresse</span>
+                <span class="contact-card-value">9 Rue du chemin de fer, L-8057 Luxembourg</span>
+              </div>
+            </div>
+
+            <!-- Mini Map or Image -->
+            <div class="contact-map">
+              <div class="map-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span>Luxembourg</span>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="contact-form-wrapper">
-          <form class="contact-form" id="contactForm" action="https://formspree.io/f/myzqlgpe" method="POST">
-            <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
-            <div class="form-row">
-              <div class="form-group">
-                <input type="text" name="name" placeholder="Votre nom" required />
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Votre email" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="tel" name="phone" placeholder="Votre téléphone" />
-            </div>
-            <div class="form-group">
-              <select name="request_type" required>
-                <option value="">Type de demande</option>
-                <option value="Je souhaite vendre">Je souhaite vendre</option>
-                <option value="Je souhaite acheter">Je souhaite acheter</option>
-                <option value="Demande d'estimation">Demande d'estimation</option>
-                <option value="Demande de conseil">Demande de conseil</option>
-                <option value="Autre">Autre</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              <span>Envoyer le message</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="22" y1="2" x2="11" y2="13"/>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-              </svg>
-            </button>
-          </form>
         </div>
       </div>
     </div>
@@ -509,7 +687,7 @@
       <div class="footer-main">
         <div class="footer-brand">
           <a href="#accueil" class="footer-logo">
-            <img src="logo.png" alt="DSP Real Estate" />
+            <img src="assets/logos/logo.png" alt="DSPImmo" />
           </a>
           <p>Votre partenaire immobilier de confiance au Luxembourg depuis plus de 15 ans.</p>
 
